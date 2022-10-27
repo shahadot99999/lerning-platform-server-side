@@ -23,8 +23,10 @@ app.get('/category/:id', (req, res) => {
         const category_educations = educations.filter(n => n.category_id === id);
         res.send(category_educations);
     }
+})
 
-
+app.get('/educations', (req, res) => {
+    res.send(educations);
 })
 app.get('/educations/:id', (req, res) => {
     const id = req.params.id;
